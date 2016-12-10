@@ -1,6 +1,6 @@
 .catalog:
   name: Rancher-Gen
-  version: 0.0.2
+  version: 0.0.3
   description: |
     Rancher template generator written in Go
   maintainer: "Caustic Lab"
@@ -22,7 +22,7 @@
       description: "Name of the output file. If omitted, then the generated content is printed to STDOUT."
       required: true
       type: "string"
-      default: "nginx.tmpl"
+      default: "nginx.conf"
     - variable: "CMD"
       description: |
         Custom run command. Template and output files will be appended automatically.

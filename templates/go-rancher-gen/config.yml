@@ -1,7 +1,7 @@
 name: Rancher-Gen
 description: |
   Rancher template generator written in Go
-version: 0.0.2
+version: 0.0.3
 category: Rancher Services
 maintainer: "Caustic Lab"
 projectURL: https://github.com/CausticLab/
