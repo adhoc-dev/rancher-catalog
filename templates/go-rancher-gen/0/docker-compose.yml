@@ -5,4 +5,4 @@ services:
     image: go-rancher-gen
     volumes:
       - ${DIR}/:/etc/share
-    command: rancher-gen ${CMD} /etc/share/${TEMPLATE} /etc/share/${OUTPUT}
+    command: ${CMD} /etc/share/${TEMPLATE} /etc/share/${OUTPUT}

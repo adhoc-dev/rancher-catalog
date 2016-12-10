@@ -1,6 +1,6 @@
 .catalog:
   name: Rancher-Gen
-  version: 0.0.1
+  version: 0.0.2
   description: |
     Rancher template generator written in Go
   maintainer: "Caustic Lab"
