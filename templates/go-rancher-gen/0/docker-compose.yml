@@ -1,0 +1,8 @@
+version: '2'
+services:
+  go-rancher-gen:
+    stdin_open: true
+    image: go-rancher-gen
+    volumes:
+      - ${DIR}/:/etc/share
+    command: rancher-gen ${CMD} /etc/share/${TEMPLATE} /etc/share/${OUTPUT}
