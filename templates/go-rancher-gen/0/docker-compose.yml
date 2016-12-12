@@ -4,5 +4,5 @@ services:
     stdin_open: true
     image: go-rancher-gen
     volumes:
-      - ${DIR}/:/etc/share
-    command: "${CMD} /etc/share/${TEMPLATE} /etc/share/${OUTPUT}"
+      - ${DIR}:/etc/share
+    command: "-config /etc/share/${CONFIG_FILE}"

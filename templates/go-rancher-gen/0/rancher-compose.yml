@@ -1,6 +1,6 @@
 .catalog:
   name: Rancher-Gen
-  version: 0.0.3
+  version: 0.0.4
   description: |
     Rancher template generator written in Go
   maintainer: "Caustic Lab"
@@ -8,25 +8,12 @@
   questions:
     - variable: "DIR"
       label: "Storage directory"
-      description: "Path of shared storage to use for `nginx.tmpl` and `nginx.conf`. No trailing slash!"
+      description: "Path of shared storage to use for `rancher-gen.cfg`."
       required: true
       type: "string"
-    - variable: "TEMPLATE"
-      label: "Template File"
-      description: "Name of the input template file"
+    - variable: "CONFIG_FILE"
+      label: "Config File"
+      description: "Name of a custom config file (ie. rancher-gen.cfg)"
       required: true
       type: "string"
-      default: "nginx.tmpl"
-    - variable: "OUTPUT"
-      label: "Output File"
-      description: "Name of the output file. If omitted, then the generated content is printed to STDOUT."
-      required: true
-      type: "string"
-      default: "nginx.conf"
-    - variable: "CMD"
-      description: |
-        Custom run command. Template and output files will be appended automatically.
-      label: "Command"
-      required: false
-      type: "string"
-      default: "--onetime"
+      default: "rancher-gen.cfg"
