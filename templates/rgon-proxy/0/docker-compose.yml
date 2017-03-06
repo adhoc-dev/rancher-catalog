@@ -20,8 +20,8 @@ services:
     logging:
       driver: "json-file"
       options:
-        max-size: 10m
-        max-file: 5
+        max-size: "10m"
+        max-file: "5"
   rgon-proxy:
     image: "causticlab/rgon-proxy:dev"  # :latest for production
     tty: true
@@ -45,8 +45,8 @@ services:
     logging:
       driver: "json-file"
       options:
-        max-size: 10m
-        max-file: 5
+        max-size: "10m"
+        max-file: "5"
     environment:
       RGEN_CONFIG_ONETIME: '/etc/rancher-gen/default/rancher-gen-onetime.cfg'
     command: "-config /etc/rancher-gen/default/rancher-gen.cfg"
