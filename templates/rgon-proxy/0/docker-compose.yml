@@ -5,6 +5,8 @@ services:
     image: "nginx"
     tty: true
     stdin_open: true
+    port:
+      - 80:80/tcp
       - 443:443/tcp
     volumes:
       - ${config_path}/htpasswd:/etc/nginx/htpasswd
