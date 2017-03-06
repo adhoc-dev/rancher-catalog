@@ -3,8 +3,8 @@ version: '2'
 services:
   nginx:
     image: "nginx"
-    tty: 'true'
-    stdin_open: 'true'
+    tty: true
+    stdin_open: true
       - 443:443/tcp
     volumes:
       - ${config_path}/htpasswd:/etc/nginx/htpasswd
@@ -22,8 +22,8 @@ services:
         max-file: "5"
   rgon-proxy:
     image: "causticlab/rgon-proxy:dev"  # :latest for production
-    tty: 'true'
-    stdin_open: 'true'
+    tty: true
+    stdin_open: true
     links:
       - nginx
     volumes_from:
