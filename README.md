@@ -1,2 +1,2 @@
-# rancher-catalog
-The causticLab Rancher Catalog repository
+# CausticLab Catalog
+The CausticLab Rancher Catalog repository
