@@ -5,7 +5,7 @@ services:
     image: "nginx"
     tty: true
     stdin_open: true
-    port:
+    ports:
       - 80:80/tcp
       - 443:443/tcp
     volumes:
