@@ -5,14 +5,12 @@ services:
     image: "nginx"
     tty: true
     stdin_open: true
-    ports:
-      - 80:80/tcp
       - 443:443/tcp
     volumes:
-      - ${path-dir}/htpasswd:/etc/nginx/htpasswd
-      - ${path-dir}/conf:/etc/nginx/conf.d
-      - ${path-dir}/vhost:/etc/nginx/vhost.d
-      - ${path-dir}/certs:/etc/nginx/certs
+      - ${config-path}/htpasswd:/etc/nginx/htpasswd
+      - ${config-path}/conf:/etc/nginx/conf.d
+      - ${config-path}/vhost:/etc/nginx/vhost.d
+      - ${config-path}/certs:/etc/nginx/certs
     labels:
       io.rancher.sidekicks: rgon-proxy
       io.rancher.scheduler.global: 'false'  # true for multi-host
@@ -33,7 +31,7 @@ services:
     ports:
       - 402:402/tcp
     volumes:
-      - ${path-dir}/rancher-gen:/etc/rancher-gen
+      - ${config-path}/rancher-gen:/etc/rancher-gen
     links:
       - nginx
     labels:
