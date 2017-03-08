@@ -10,6 +10,18 @@
       type: "string"
       required: true
       default: "/var/rgon-proxy-config"
+    - variable: ACME_EMAIL
+      description: "Account to use for Let's Encrypt certificate creation"
+      label: "Let's Encrypt Email Address"
+      type: "string"
+    - variable: ACME_API
+      description: "Select staging or live certificates"
+      label: "Let's Encrypt API"
+      type: enum
+      default: "https://acme-v01.api.letsencrypt.org/directory"
+      options:
+        - https://acme-v01.api.letsencrypt.org/directory
+        - https://acme-staging.api.letsencrypt.org/directory
 
 nginx:
   scale: 1
