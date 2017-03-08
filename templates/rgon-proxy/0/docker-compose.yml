@@ -51,4 +51,3 @@ services:
       RGEN_CONFIG_ONETIME: '/etc/rancher-gen/default/rancher-gen-onetime.cfg'
       ACME_EMAIL: ${ACME_EMAIL}
       ACME_API: ${ACME_API}
-    command: "-config /etc/rancher-gen/default/rancher-gen.cfg"
