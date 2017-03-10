@@ -14,6 +14,11 @@
       description: "Account to use for Let's Encrypt certificate creation"
       label: "Let's Encrypt Email Address"
       type: "string"
+    - variable: ACME_AGREE_TOS
+      description: "Accept the Let's Encrypt TOS agreement: https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf"
+      label: "Accept LE TOS Agreement"
+      type: boolean
+      required: true
     - variable: ACME_API
       description: "Select staging or live certificates"
       label: "Let's Encrypt API"
