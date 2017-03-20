@@ -52,3 +52,28 @@ services:
       ACME_EMAIL: ${ACME_EMAIL}
       ACME_API: ${ACME_API}
       ACME_AGREE_TOS: ${ACME_AGREE_TOS}
+  fs-server:
+    image: "causticlab/filesync"
+    tty: true
+    stdin_open: true
+    volumes_from:
+      - nginx
+    labels:
+      io.rancher.scheduler.affinity:host_label: rgon.primary=true
+    environment:
+      FILESYNC_MODE: 'server'
+      FILESYNC_PATH: '/etc/nginx'
+  fs-client:
+    image: "causticlab/filesync"
+    tty: true
+    stdin_open: true
+    volumes_from:
+      - nginx
+    links:
+      - fs-server
+    labels:
+      io.rancher.scheduler.global: 'true'
+      io.rancher.scheduler.affinity:host_label_ne: rgon.primary=true
+    environment:
+      FILESYNC_MODE: 'client'
+      FILESYNC_PATH: '/etc/nginx'
