@@ -76,4 +76,5 @@ services:
       io.rancher.scheduler.affinity:host_label_ne: rgon.primary=true
     environment:
       FILESYNC_MODE: 'client'
+      FILESYNC_IP: 'fs-server'
       FILESYNC_PATH: '/etc/nginx'
