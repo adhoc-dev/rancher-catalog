@@ -7,4 +7,4 @@ Related containers can be defined with following labels:
 - `rgon.domain=mydomain.com`
 - `rgon.port=80`
 - `rgon.ssl='true'`
-- `rgon.redirect='https'`
+- `rgon.redirect=https`
